@@ -1,1 +1,1 @@
-# my-pygame
+# My game on python
