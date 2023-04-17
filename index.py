@@ -1,16 +1,25 @@
-import pystray
-from Pillow import Image
+from pystray import Icon as icon, Menu as menu, MenuItem as item
+from PIL import Image
 
-def on_exit():
-    print("Exiting...")
-
-def on_click(icon):
-    print("Icon clicked")
-
+def icon_clicked(icon):
+    print("click")
+# Create the systray icon
 image = Image.open("icon.png")
+#menu = pystray.Menu(pystray.MenuItem("Exit", lambda: exit()))
+icona = icon(
+    'test name',
+    icon=image,
+    menu=menu(
+    item(
+        'With submenu',
+        menu(
+            item(
+                'Submenu item 1',
+                lambda icon, item: 1),
+            item(
+                'Submenu item 2',
+                lambda icon, item: 2))))
+)
 
-menu = pystray.Menu(pystray.MenuItem("Exit", on_exit))
-
-icon = pystray.Icon("name", image, "Tooltip", menu)
-
-icon.run(on_click)
+# To finally show you icon, call run
+icona.run()
