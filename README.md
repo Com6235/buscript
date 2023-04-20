@@ -1,2 +1,2 @@
-# Ruscript
-## my attempt to make a language
+# Ruscript 
+my attempt to make a language with python
