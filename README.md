@@ -1,1 +1,2 @@
-# My game on python
+# Ruscript
+## my attempt to make a language
