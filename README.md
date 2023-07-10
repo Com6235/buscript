@@ -1,5 +1,4 @@
-![Buscript](icon.png)
-# Buscript
+# Buscript ![Buscript](icon.png)
 my attempt to make a language with python
 ## Why?
 idk
